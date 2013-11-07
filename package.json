@@ -1,0 +1,14 @@
+{
+  "name": "Homie",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "",
+    "mongodb": "",
+    "mongojs": "",
+    "request": "",
+    "polyline": "",
+    "querystring": "",
+    "moment": "~2.3.1",
+    "ws": ""
+  }
+}
