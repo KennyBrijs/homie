@@ -100,6 +100,9 @@ app.post("/rides/acceptriderequest", rides.acceptRideRequest);
 app.post("/rides/getmatchedrequest", rides.getMatchedRequests);
 app.post("/rides/getmatchedrides", rides.getMatchedRides);
 
+// User API
+app.post("/users/getfacebookprofile", users.getFacebookProfile);
+
 
 // Facebook auth
 app.get('/', function(req, res){
