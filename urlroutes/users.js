@@ -37,14 +37,14 @@ exports.loginFacebookUser = function(request, response) {
                         } else {
                             response.send({
                                 "meta": utils.createOKMeta(),
-                                "response": docs._id;
+                                "response": docs._id
                             });
                         }
                     });
                 } else {
                     response.send({
                         "meta": utils.createOKMeta(),
-                        "response": docs._id;
+                        "response": docs._id
                     });
                 }
         });
@@ -75,7 +75,7 @@ exports.getHomieIdForFacebookId = function(request, response) {
                 } else {
                     response.send({
                         "meta": utils.createOKMeta(),
-                        "response": docs._id;
+                        "response": docs._id
                     });
                 }
         });
