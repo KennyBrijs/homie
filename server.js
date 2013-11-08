@@ -8,8 +8,8 @@ var config = require("./auth/dbconfig.js");
 //var passport = require('passport');
 //var FacebookStrategy = require('passport-facebook').Strategy;
 
-var FACEBOOK_APP_ID = "172870162912122"
-var FACEBOOK_APP_SECRET = "0a714caf869f889d94189a1544c5c3c5";
+var FACEBOOK_APP_ID = "680235412011206"
+var FACEBOOK_APP_SECRET = "f3b1abe5a2e7c1ed25efc811289d7034";
 
 var config_serverAddress = "enigmatic-stream-2220.herokuapp.com";
 
