@@ -18,10 +18,11 @@
     <!-- Facebook login start -->
     <div id="fb-root"></div>
     <script>
+
       // Additional JS functions here
       window.fbAsyncInit = function() {
         FB.init({
-          appId      : '172870162912122', // App ID
+          appId      : '680235412011206', // App ID
           channelUrl : '//enigmatic-stream-2220.herokuapp.com/channel.html', // Channel File
           status     : true, // check login status
           cookie     : true, // enable cookies to allow the server to access the session
@@ -30,7 +31,7 @@
 
         // Additional init code here
 
-      };
+
 
           
       // Here we subscribe to the auth.authResponseChange JavaScript event. This event is fired
@@ -62,14 +63,14 @@
           FB.login();
         }
       });
-      };
+            };
 
        // Load the SDK asynchronously
       (function(d){
        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
        if (d.getElementById(id)) {return;}
        js = d.createElement('script'); js.id = id; js.async = true;
-       js.src = "//connect.facebook.net/en_US/all.js";
+       js.src = "https://connect.facebook.net/en_US/all.js";
        ref.parentNode.insertBefore(js, ref);
       }(document));
 
@@ -97,7 +98,6 @@
       Learn more about options for the login button plugin:
       /docs/reference/plugins/login/ -->
 
-    <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
 
     <!-- Facebook login end -->
 
@@ -120,6 +120,8 @@
                 <li><a href="profile.html">Profile</a></li>
               </ul>
               <button type="button" class="btn btn-default navbar-btn pull-right">Sign in</button>
+                  <fb:login-button show-faces="true" width="200" max-rows="1">LGIN</fb:login-button>
+
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>
