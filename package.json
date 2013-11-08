@@ -9,6 +9,6 @@
     "polyline": "",
     "querystring": "",
     "moment": "~2.3.1",
-    "ws": ""
+    "passport":""
   }
 }
