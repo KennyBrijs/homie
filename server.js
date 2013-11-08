@@ -134,7 +134,7 @@ app.get('/login', function(req, res){
 //   request.  The first step in Facebook authentication will involve
 //   redirecting the user to facebook.com.  After authorization, Facebook will
 //   redirect the user back to this application at /auth/facebook/callback
-app.get('/auth/facebook',
+/*app.get('/auth/facebook',
   passport.authenticate('facebook'),
   function(req, res){
     // The request will be redirected to Facebook for authentication, so this
@@ -155,7 +155,7 @@ app.get('/auth/facebook/callback',
 app.get('/logout', function(req, res){
   req.logout();
   res.redirect('/');
-});
+});*/
 
 
 app.use(express.static(__dirname + '/client'));
