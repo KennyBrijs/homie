@@ -156,7 +156,7 @@ app.get('/logout', function(req, res){
 });
 
 
-app.use(express.static(__dirname + '/clientpage'));
+app.use(express.static(__dirname + '/client'));
 
 // start server on port 8888 OR on the port in the cloud deployment config.
 console.log("Listening on port " + (process.env.PORT || 8888) +  "...");
