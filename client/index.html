@@ -79,7 +79,8 @@
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me', function(response) {
           console.log('Good to see you, ' + response.name + '.');
-          window.logged_in_homie = response;
+          //window.logged_in_homie = response;
+          $.cookie("logged_in_homie", JSON.stringify(response));
           // TODO:
           // Do ajax post call to: 
           // server_url/users/loginfacebookuser 

@@ -1,3 +1,4 @@
 $(function(){
-    console.log(window.logged_in_homie);
+    console.log($.cookie("logged_in_homie"));
+
 });
