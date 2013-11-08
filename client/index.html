@@ -79,6 +79,13 @@
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me', function(response) {
           console.log('Good to see you, ' + response.name + '.');
+
+          // TODO:
+          // Do ajax post call to: 
+          // server_url/users/loginfacebookuser 
+          // and send Facebook profile to server
+          // This registers the id of the user on the server.
+
         });
       }
     </script>

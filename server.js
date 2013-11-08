@@ -75,6 +75,7 @@ function mongoConnectAndAuthenticate(callback) {
         (db.collection(config.matchescollection)).ensureIndex( { provider_id: 1 }, function(err, idxName) { });
         (db.collection(config.rideRequestsCollection)).ensureIndex( { start_time: 1, end_time: 1 }, function(err, idxName) { });
         (db.collection(config.rideRequestsCollection)).ensureIndex( { user_id: 1 }, function(err, idxName) { });
+        (db.collection(config.usersCollection)).ensureIndex( { facebook_id: 1 }, function(err, idxName) { });
     });
 }
 
@@ -102,6 +103,7 @@ app.post("/rides/getmatchedrides", rides.getMatchedRides);
 
 // User API
 app.post("/users/loginfacebookuser", users.loginFacebookUser);
+app.post("/users/gethomieidforfacebookid", users.getHomieIdForFacebookId);
 
 
 // Facebook auth
