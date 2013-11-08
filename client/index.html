@@ -18,8 +18,6 @@
     <!-- Facebook login start -->
     <div id="fb-root"></div>
     <script>
-      var logged_in_homie = undefined;
-
       // Additional JS functions here
       window.fbAsyncInit = function() {
         FB.init({
@@ -81,7 +79,7 @@
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me', function(response) {
           console.log('Good to see you, ' + response.name + '.');
-          logged_in_homie = response;
+          window.logged_in_homie = response;
           // TODO:
           // Do ajax post call to: 
           // server_url/users/loginfacebookuser 
