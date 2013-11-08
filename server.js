@@ -5,8 +5,8 @@ var utils = require("./utils");
 var users = require("./urlroutes/users");
 var rides = require("./urlroutes/rides");
 var config = require("./auth/dbconfig.js");
-var passport = require('passport');
-var FacebookStrategy = require('passport-facebook').Strategy;
+//var passport = require('passport');
+//var FacebookStrategy = require('passport-facebook').Strategy;
 
 var FACEBOOK_APP_ID = "172870162912122"
 var FACEBOOK_APP_SECRET = "0a714caf869f889d94189a1544c5c3c5";
@@ -17,7 +17,7 @@ var config_serverAddress = "enigmatic-stream-2220.herokuapp.com";
 // PASSPORT
 
 // Passport session setup.
-passport.serializeUser(function(user, done) {
+/*passport.serializeUser(function(user, done) {
     done(null, user.id);
 });
 
@@ -25,14 +25,14 @@ passport.deserializeUser(function(id, done) {
     users.findOrCreateUser(id, function(err, user) {
         done(null, user);
     });
-});
+});*/
 
 
 // Use the FacebookStrategy within Passport.
 //   Strategies in Passport require a `verify` function, which accept
 //   credentials (in this case, an accessToken, refreshToken, and Facebook
 //   profile), and invoke a callback with a user object.
-passport.use(new FacebookStrategy({
+/*passport.use(new FacebookStrategy({
     clientID: FACEBOOK_APP_ID,
     clientSecret: FACEBOOK_APP_SECRET,
     callbackURL: config_serverAddress + "/auth/facebook/callback"
@@ -43,7 +43,7 @@ passport.use(new FacebookStrategy({
         done(null, user);
     })
   }
-));
+));*/
 
 
 
@@ -101,7 +101,7 @@ app.post("/rides/getmatchedrequest", rides.getMatchedRequests);
 app.post("/rides/getmatchedrides", rides.getMatchedRides);
 
 // User API
-//app.post("/users/getfacebookprofile", users.getFacebookProfile);
+app.post("/users/loginfacebookuser", users.loginFacebookUser);
 
 
 // Facebook auth
