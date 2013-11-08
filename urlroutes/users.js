@@ -18,7 +18,7 @@ exports.loginFacebookUser = function(request, response) {
     server.mongoConnectAndAuthenticate(function (err, conn, db) {
         var collection = db.collection(config.usersCollection);
 
-        collection.find({ 'facebook_id': facebookProfile.id })
+        collection.find({ 'facebook_id': facebookProfile.username })
             .each(function (err, docs) {
                 if (err) { 
                     response.send({
@@ -27,7 +27,7 @@ exports.loginFacebookUser = function(request, response) {
                     });
                 } else if (!docs) {
                     collection.insert({
-                        "facebook_id": facebookProfile.id
+                        "facebook_id": facebookProfile.username
                     }, function (err, docs) {
                         if (err) {
                             response.send({
@@ -55,12 +55,12 @@ exports.loginFacebookUser = function(request, response) {
 exports.getHomieIdForFacebookId = function(request, response) {
     var requestlib = require('request');
 
-    var facebook_id = request.body.facebook_id;
+    var facebook_id = request.body.facebook_username;
     
     server.mongoConnectAndAuthenticate(function (err, conn, db) {
         var collection = db.collection(config.usersCollection);
 
-        collection.find({ 'facebook_id': facebook_id })
+        collection.find({ 'facebook_id': facebook_username })
             .each(function (err, docs) {
                 if (err) { 
                     response.send({
